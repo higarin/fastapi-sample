@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "fastapi-tutorial"
+version = "0.1.0"
+description = ""
+authors = ["Daisuke Higashi <daisuke.mik@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "3.9.5"
+fastapi = "^0.65.1"
+uvicorn = {extras = ["standard"], version = "^0.13.4"}
+boto3 = "^1.17.83"
+SQLAlchemy = "^1.4.17"
+graphene = ">=2.0"
+graphene-sqlalchemy = ">=2.0"
+pydantic = {extras = ["dotenv"], version = "^1.8.2"}
+PyJWT = "^2.1.0"
+httpx = "^0.18.1"
+cryptography = "^3.4.7"
+alembic = "^1.6.5"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
+black = "^21.5b2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+exclude = "alembic/versions"
